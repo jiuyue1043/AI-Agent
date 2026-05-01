@@ -111,4 +111,6 @@ class RepoScanner:
         key_files = self.scan_key_files()
 
         return f"""## 代码仓库目录结构
-
+            {structure}
+            ## 关键配置文件
+            {key_files}"""
