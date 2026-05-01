@@ -1,0 +1,37 @@
+llm:
+  model: "gpt-4o"
+  temperature: 0.3
+  max_tokens: 4096
+  # base_url: "https://api.openai.com/v1"
+
+agents:
+  requirement_parser:
+    model: "gpt-4o"
+    temperature: 0.2
+  architecture_designer:
+    model: "gpt-4o"
+    temperature: 0.3
+  code_generator:
+    model: "gpt-4o"
+    temperature: 0.1
+  test_generator:
+    model: "gpt-4o"
+    temperature: 0.2
+  report_generator:
+    model: "gpt-4o"
+    temperature: 0.4
+
+output:
+  directory: "outputs"
+
+repo_scanner:
+  max_depth: 4
+  ignore_patterns:
+    - "node_modules"
+    - ".git"
+    - "__pycache__"
+    - ".venv"
+    - "venv"
+    - "dist"
+    - "build"
+    - ".next"
